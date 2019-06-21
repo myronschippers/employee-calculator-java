@@ -2,6 +2,11 @@
 
 In order to ramp up into Java we are building a web based Employee Calculator.
 
+## Prerequisites
+
+* [IntelliJ](https://www.jetbrains.com/idea/download/#section=mac) - download the editor if you don't already have it.
+* Java - install java with brew by running
+
 ## Project Setup
 
 1. Inside of IntelliJ create a new project.

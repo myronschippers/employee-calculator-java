@@ -4,11 +4,9 @@ import com.myron.employeecalculator.data.EmployeeRepository;
 import com.myron.employeecalculator.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -29,6 +27,16 @@ public class BaseController {
         employeeRepository.addEmployee(newEmployee);
 
         return newEmployee;
+    }
+
+    @RequestMapping("/get/employees")
+    public @ResponseBody List<Employee> getEmployees() {
+        return employeeRepository.getAllEmployees();
+    }
+
+    @RequestMapping("/search/{id}")
+    public @ResponseBody List<Employee> searchById(@PathVariable String id) {
+        return employeeRepository.searchById(id);
     }
 
     @RequestMapping("/")

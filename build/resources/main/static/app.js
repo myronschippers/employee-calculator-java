@@ -8,8 +8,10 @@ function onReady() {
     const $position = $('.js-employee-position');
     const $salary = $('.js-employee-salary');
     const $message = $('.js-employee-message');
+    const $searchId = $('.js-search-id');
 
     $('.js-add-employee').on('click', addEmployeeHandler);
+    $('.js-on-search-id').on('click', onSearchEmployeeId);
 
     function addEmployeeHandler (event) {
         const data = {
@@ -32,6 +34,7 @@ function onReady() {
         .then(function(response) {
             $message.text('The Employee has been added.');
             clearFields();
+            getEmployees();
         })
         .catch(function(error) {
             console.log('ERROR: ', error);
@@ -44,6 +47,26 @@ function onReady() {
         $lastName.val('');
         $salary.val('');
         $position.val('');
+    }
+
+    function getEmployees() {
+        $.ajax({
+            method: 'GET',
+            url: '/get/employees',
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+    }
+
+    function onSearchEmployeeId(event) {
+        $.ajax({
+            method: 'GET',
+            url: `/search/${$searchId.val()}`,
+        })
+        .then(function(response) {
+            console.log(response);
+        })
     }
 }
 

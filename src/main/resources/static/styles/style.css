@@ -1,3 +1,7 @@
+body {
+    background-color: #b8bccc;
+}
+
 .sectCntr {
     display: block;
     width: 100%;
@@ -65,10 +69,15 @@
     box-sizing: border-box;
     width: 460px;
     max-width: 100%;
+    background-color: #efefef;
+    border-radius: 6px;
+    border: 1px solid #7d84a1;
+    padding: 20px;
 }
 
 .card > * + * {
     margin-top: 8px;
+    font-weight: 600;
 }
 
 .card-hd {

@@ -12,48 +12,87 @@
     <script type="text/javascript" th:src="@{/app.js}"></script>
 </head>
 <body>
-    <p>Hi!</p>
+    <div class="sectCntr">
+        <p>Hi!</p>
 
-    <h2>Add an Employee</h2>
+        <div class="blocks blocks__alnCenter">
+            <div>
 
-    <div class="blocks blocks__alnCenter">
-        <div>
+                <div class="card">
+                    <div>
+                        <h3 class="hdg hdg_inherit">Add an Employee</h3>
+                    </div>
+                    <div>
 
-            <div class="card">
-                <div>
+                        <div class="blocks blocks_2up">
+                            <div>
+                                <label class="fieldSet">
+                                    <p class="fieldSet-label">First Name</p>
+                                    <input
+                                        type="text"
+                                        required
+                                        class="js-employee-firstname fieldSet-input"
+                                    />
+                                </label>
+                                <label class="fieldSet">
+                                    <p class="fieldSet-label">Last Name</p>
+                                    <input
+                                        type="text"
+                                        required
+                                        class="js-employee-lastname fieldSet-input"
+                                    />
+                                </label>
+                            </div>
+                            <div>
+                                <label class="fieldSet">
+                                    <p class="fieldSet-label">Position</p>
+                                    <select class="js-employee-position fieldSet-select">
+                                        <option value="Associate">Associate</option>
+                                        <option value="Associate">Analyst</option>
+                                        <option value="Associate">Senior Analyst</option>
+                                        <option value="Associate">Manager</option>
+                                    </select>
+                                </label>
+                                <label class="fieldSet">
+                                    <p class="fieldSet-label">Salary</p>
+                                    <input
+                                        class="js-employee-salary fieldSet-input"
+                                        type="number"
+                                        required
+                                    />
+                                </label>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div>
+                        <button class="js-add-employee">ADD EMPLOYEE</button>
+                    </div>
+                    <div>
+                        <p class="js-employee-message"></p>
+                    </div>
                 </div>
-                <div>
-                    <label>
-                        <p>First Name</p>
-                        <input type="text" required class="js-employee-firstname" />
-                    </label>
-                    <label>
-                        <p>Last Name</p>
-                        <input type="text" required class="js-employee-lastname" />
-                    </label>
-                    <label>
-                        <p>Position</p>
-                        <select class="js-employee-position">
-                            <option value="Associate">Associate</option>
-                            <option value="Associate">Analyst</option>
-                            <option value="Associate">Senior Analyst</option>
-                            <option value="Associate">Manager</option>
-                        </select>
-                    </label>
-                    <label>
-                        <p>Salary</p>
-                        <input class="js-employee-salary" type="number" required />
-                    </label>
-                </div>
-                <div>
-                    <button class="js-add-employee">ADD EMPLOYEE</button>
-                </div>
-                <div>
-                    <p class="js-employee-message"></p>
+
+            </div>
+        </div>
+
+        <div class="blocks blocks__alnCenter">
+            <div>
+                <div class="card">
+                    <div class="card-hd">
+                        Search for Employee by ID
+                    </div>
+                    <div>
+                        <label>
+                            <p>Employee ID:</p>
+                            <input type="number" class="js-search-id" />
+                        </label>
+                    </div>
+                    <div>
+                        <button class="js-on-search-id">Search</button>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
