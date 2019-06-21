@@ -1,0 +1,77 @@
+.sectCntr {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.blocks {
+    display: block;
+    font-size: 0;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.blocks > * {
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.blocks_1up > * {
+    width: 100%;
+}
+
+.blocks_2up > * {
+    width: 50%;
+}
+
+.blocks_3up > * {
+    width: 33.333333%
+}
+
+.blocks_4up > * {
+    width: 25%;
+}
+
+.blocks__alnCenter {
+    text-align: center;
+}
+
+.blocks__alnLeft {
+    text-align: left;
+}
+
+.blocks__alnRight {
+    text-align: right;
+}
+
+.blocks_vrtAlnTop > * {
+    vertical-align: top;
+}
+
+.blocks_vrtAlnMiddle > * {
+    vertical-align: middle;
+}
+
+.blocks_vrtAlnBottom > * {
+    vertical-align: bottom;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 460px;
+    max-width: 100%;
+}
+
+.card > * + * {
+    margin-top: 8px;
+}
+
+.card-hd {
+    font-size: 2rem;
+    text-align: center;
+}
